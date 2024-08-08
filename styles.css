@@ -1,15 +1,11 @@
 /* Estilos generales */
 body {
-    font-family: 'Great Vibes', cursive, 'Playfair Display', serif;
+    font-family: 'Great Vibes', cursive, 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #000;
     color: #ffc0cb;
     line-height: 1.6;
-}
-
-.custom-font {
-    font-family: 'Open Sans', sans-serif;
 }
 
 /* Estilos del header */
@@ -114,6 +110,8 @@ header img {
     padding: 50px 20px;
     background-color: #000;
     text-align: center;
+    position: relative;
+    /* Necesario para el overlay */
 }
 
 .gallery h2 {
@@ -126,26 +124,53 @@ header img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
+    position: relative;
+    /* Necesario para el overlay */
+}
+
+.gallery-grid figure {
+    margin: 0;
 }
 
 .gallery-grid img {
     width: 100%;
-    height: auto;
+    height: 0;
+    padding-top: 100%;
+    /* Mantiene proporción cuadrada */
+    object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    /* Necesario para el overlay */
 }
 
 .gallery-grid img:hover {
     transform: scale(1.05);
 }
 
-/* Estilos del Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #111;
-    color: #ffc0cb;
-    border-top: 2px solid #e75480;
+/* Estilos del overlay de imagen */
+.gallery-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.gallery-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.gallery-overlay.active {
+    display: flex;
 }
 
 /* Estilos Responsivos */
