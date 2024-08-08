@@ -1,28 +1,36 @@
 /* Estilos generales */
 body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Great Vibes', cursive, 'Playfair Display', serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f5f2;
-    color: #333;
+    background-color: #000;
+    color: #ffc0cb;
     line-height: 1.6;
+}
+
+.custom-font {
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Estilos del header */
 header {
     text-align: center;
     padding: 20px;
-    background-color: #f2e8e4;
+    background-color: #000;
     border-bottom: 2px solid #e75480;
+}
+
+header img {
+    filter: brightness(0) invert(1);
 }
 
 /* Estilos del Hero Section */
 .hero {
-    background-image: url('hero-image.jpg');
+    background-image: url('https://raw.githubusercontent.com/nsk-branding/atelier-de-costura.io/main/img/pexels-photo-3965557.webp');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    color: white;
+    color: #ffc0cb;
     text-align: center;
     padding: 150px 20px;
     position: relative;
@@ -47,11 +55,14 @@ header {
 .hero h1 {
     font-size: 48px;
     margin-bottom: 10px;
+    color: #ffc0cb;
 }
 
-.hero p {
+.hero p.custom-font,
+.btn-whatsapp.custom-font {
     font-size: 24px;
     margin-bottom: 20px;
+    color: #ffc0cb;
 }
 
 .btn-whatsapp {
@@ -71,29 +82,23 @@ header {
 /* Estilos de la sección "Sobre Nosotros" */
 .about {
     padding: 50px 20px;
-    background-color: #fff4f2;
+    background-color: #111;
     text-align: center;
 }
 
 .about h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: #ffc0cb;
 }
 
-.about-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-text {
-    flex: 1 1 300px;
-    padding: 20px;
+.about-text.custom-font {
+    text-align: justify;
+    margin-bottom: 20px;
+    color: #ffc0cb;
 }
 
 .about-images {
-    flex: 1 1 300px;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -107,13 +112,14 @@ header {
 /* Estilos de la Galería */
 .gallery {
     padding: 50px 20px;
-    background-color: #f8f5f2;
+    background-color: #000;
     text-align: center;
 }
 
 .gallery h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: #ffc0cb;
 }
 
 .gallery-grid {
@@ -124,6 +130,7 @@ header {
 
 .gallery-grid img {
     width: 100%;
+    height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
@@ -136,8 +143,8 @@ header {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #f2e8e4;
-    color: #555;
+    background-color: #111;
+    color: #ffc0cb;
     border-top: 2px solid #e75480;
 }
 
@@ -147,12 +154,8 @@ footer {
         font-size: 36px;
     }
 
-    .hero p {
+    .hero p.custom-font {
         font-size: 18px;
-    }
-
-    .about-content {
-        flex-direction: column;
     }
 
     .about-images {
